@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+	<head>
+		<!-- تیتر روی تب بالای مرورگر -->
+		<title>اپلیکیشن تبدیل ارز</title>
+		<!-- اطلاعات متا موجود در تگ هد -->
+		<meta charset="UTF-8">
+		<!-- برای نمایش در موبایل -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- نام نویسنده اپلیکیشن -->
+		<meta name="author" content="danial_rezaei">
+		<!-- خواندن فایل سی اس اس و کتابخانه های آنلاین مانند font awesome -->
+		<link rel="stylesheet" href="exchange_task.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.3.2/css/flag-icons.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+	</head>
+	
+	<body>
+		<!-- بخش هدر اپلیکیشن -->
+		<header>
+			<div class="header-pic">
+			</div>
+			<!-- عنوان اصلی اپلیکیشن در قسمت هدر -->	
+			<div class="title-app">
+				<h1>اپلیکیشن تبدیل ارز</h1>
+				<span class="theme-change"><i class="fa-solid fa-lightbulb"></i></span>
+			</div>	
+			
+		</header>
+		
+		<!-- بخش بدنه اصلی اپلیکیشن -->
+		<main>
+			<!-- منوی خطا و رفرش در بدنه اصلی-->
+			<section class="fault">
+				<i class="fa-solid fa-triangle-exclamation"></i>
+				<h3>اتصال به اینترنت قطع است</h3>
+				<p>برای نمایش نرخ‌های لحظه‌ای، لطفاً اتصال<br> خود را بررسی کنید</p>
+				<span><i class="fa fa-refresh" aria-hidden="true"></i> بارگذاری مجدد</span>
+			
+			</section>
+		
+			<!-- ورودی و خروجی تبدیل ارز به یکدیگر در بدنه اصلی -->
+			<section class="exchange-input">
+				<h2>وارد کردن مقدار ارز</h2>
+				<div class="input-container">
+					<span class="paragraph">ورودی :</span>
+					<div class="first-input">
+						<input type="number" min="0" value="0" autocomplete="off">
+						<select name="first_currency">
+							<option value="dollar">دلار</option>
+							<option value="rial">ریال</option>
+						</select>
+					</div>
+					
+					<span class="btn-exchange">⇅</span>
+					<span class="paragraph">خروجی :</span>
+					<div class="second-input">
+						<input type="text" value="0" autocomplete="off" readonly>
+						<select name="first_currency" disabled>
+							<option value="rial">ریال</option>
+							<option value="dollar">دلار</option>
+						</select>
+					</div>
+				</div>
+				
+			</section>
+			
+			<!-- پیغام قطع اینترنت در قیمت بالای جدول ارز -->
+			<div class="offline-alert">
+				
+					<p><i class="fa-solid fa-triangle-exclamation"></i> خطا در دریافت اطلاعات — اتصال اینترنت را بررسی کنید</p>
+			</div>
+			
+			<!-- جدول نمایش نرخ لحظه ای ارز در بدنه اصلی -->
+			<section class="exchange-show">
+				<table>
+					<thead>
+						<tr>
+							<th>ارز</th>
+							<th>نام</th>
+							<th>نرخ (IRR)</th>
+							<th>تغییر ۲۴ ساعته</th>
+							<th>بالاترین</th>
+							<th>پایین‌ترین</th>
+							<th>وضعیت</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><span class="fi fi-us"></span></td>
+							<td>دلار آمریکا</td>
+							<td class="dollar-price">--</td>
+							<td class="dollar-change">--</td>
+							<td>--</td>
+							<td>--</td>
+							<td class="dollar-percent">--</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+			
+		</main>
+		
+		<!-- بخش بدنه فوتر اپلیکیشن -->
+		<footer>
+			<h2>لینک شبکه های اجتماعی</h2>
+			<div class="social-media">
+				<span><a href="https://github.com/danielrezaei7597-prog"><i class="fa-brands fa-github"></i></a></span>
+				<span><a href="https://www.linkedin.com/in/danial-rezaei-9026972aa"><i class="fa-brands fa-linkedin"></i></a></span>
+			</div>
+						
+			<h3>© تمامی حقوق برای دانیال رضایی محفوظ است.</h3>
+		</footer>
+		
+		<!-- کدهای مربوط به زبان جاواسکریپت اپلیکیشن در فایل ارجاع داده شده -->
+		<script src="exchange_task.js">
+		</script>
+		
+	</body>
+
+</html>

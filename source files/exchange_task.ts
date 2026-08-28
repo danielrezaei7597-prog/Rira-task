@@ -28,7 +28,7 @@ async function continuousApi(): Promise<CurrencyItem | 1> {
   const controller = new AbortController();
 
   // کلیدی که برای api ثبت‌نام رایگان کردم و بهم تحویل داده شد.
-  const API_URL = "https://api.brsapi.ir/Market/Gold_Currency.php?key=Bm5jRQvuf5krYA3deBaPZwqTk75zkL8g";
+  const API_URL = "https://api.brsapi.ir/Market/Gold_Currency";
 
   // تایمر برای لغو درخواست بعد از ۱۰ ثانیه
   const timeoutId = setTimeout(() => {
@@ -123,7 +123,7 @@ async function continuousApi(): Promise<CurrencyItem | 1> {
 
 // این تابع تنها برای دیباگ و تست API هست و در این برنامه استفاده‌ای نشده
 async function apiRequest(): Promise<CurrencyItem> {
-  const url = "https://api.brsapi.ir/Market/Gold_Currency.php?key=Bm5jRQvuf5krYA3deBaPZwqTk75zkL8g";
+  const url = "https://api.brsapi.ir/Market/Gold_Currency";
 
   const response = await fetch(url);
 

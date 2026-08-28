@@ -12,7 +12,7 @@ async function continuousApi() {
     // یک شی از نوع کنترلر ایجاد کردیم برای کنترل fetch
     const controller = new AbortController();
     // کلیدی که برای api ثبت‌نام رایگان کردم و بهم تحویل داده شد.
-    const API_URL = "https://api.brsapi.ir/Market/Gold_Currency.php?key=Bm5jRQvuf5krYA3deBaPZwqTk75zkL8g";
+    const API_URL = "#";
     // تایمر برای لغو درخواست بعد از ۱۰ ثانیه
     const timeoutId = setTimeout(() => {
         controller.abort();
@@ -90,7 +90,7 @@ async function continuousApi() {
 }
 // این تابع تنها برای دیباگ و تست API هست و در این برنامه استفاده‌ای نشده
 async function apiRequest() {
-    const url = "https://api.brsapi.ir/Market/Gold_Currency.php?key=Bm5jRQvuf5krYA3deBaPZwqTk75zkL8g";
+    const url = "https://api.brsapi.ir/Market/Gold_Currency";
     const response = await fetch(url);
     if (!response.ok) {
         throw new Error(`HTTP ${response.status}`);
